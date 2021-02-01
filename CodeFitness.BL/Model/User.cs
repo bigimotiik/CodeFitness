@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeFitness.BL.Model
 {
     /// <summary>
     /// Пользователь
     /// </summary>
-    class User
+   [Serializable]
+   public class User
     {
         #region Свойства
         /// <summary>
@@ -50,7 +47,7 @@ namespace CodeFitness.BL.Model
             {
                 throw new ArgumentNullException("Имя пользователя не может быть пустым", nameof(name));
             }
-            if (Gender == null)
+            if (gender == null)
             {
                 throw new ArgumentNullException("Гендер не может быть пустым", nameof(gender));
             }
